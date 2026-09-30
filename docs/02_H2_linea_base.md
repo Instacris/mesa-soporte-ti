@@ -1,6 +1,6 @@
 # H2 · 30-09 — Línea base del proyecto (Planificación v1.0)
 
-**Roles en este hito:** Líder de Proyecto y Control: Milton [Apellido] · Solución y Desarrollo: Cristóbal Chacón · Datos, Calidad y Pruebas: Milton [Apellido]
+**Roles en este hito:** Líder de Proyecto y Control: Milton Zambrano · Solución y Desarrollo: Cristóbal Chacón · Datos, Calidad y Pruebas: Milton Zambrano
 
 > Este documento congela la **línea base**: todo cambio posterior de alcance, plazo o costo se registra
 > como cambio controlado (tarjeta en el tablero + nota en el Reporte de Avance).
@@ -159,7 +159,7 @@ más 15 % de contingencia por ser un equipo sin experiencia previa conjunta.
 | Integrante | Roles que ejerce (rotación) | Dedicación estimada |
 |---|---|---|
 | Cristóbal Chacón | Líder + Datos/QA (H1), Desarrollo (H2), Líder + Datos/QA (H3) | ~59 h |
-| Milton [Apellido] | Desarrollo (H1), Líder + Datos/QA (H2), Desarrollo (H3) | ~59 h |
+| Milton Zambrano | Desarrollo (H1), Líder + Datos/QA (H2), Desarrollo (H3) | ~59 h |
 
 Disponibilidad: clases (martes y miércoles) + trabajo autónomo en horario vespertino/fin de semana
 (un integrante trabaja a tiempo completo durante el día, ver riesgo R-01).
@@ -343,8 +343,8 @@ public/estilos.css
 test/                  # pruebas automatizadas (node:test)
 ```
 
-**Revisión cruzada:** arquitectura propuesta por Solución y Desarrollo (Cristóbal Chacón), revisada por Datos/QA (Milton [Apellido])
-en cuanto a integridad de datos, y validada por el Líder (Milton [Apellido]) respecto de alcance y plazo.
+**Revisión cruzada:** arquitectura propuesta por Solución y Desarrollo (Cristóbal Chacón), revisada por Datos/QA (Milton Zambrano)
+en cuanto a integridad de datos, y validada por el Líder (Milton Zambrano) respecto de alcance y plazo.
 
 ---
 
@@ -422,7 +422,7 @@ gantt
 | Fecha | Hito | Entregable | Responsable del hito (Líder) |
 |---|---|---|---|
 | mar 29-09 → mié 30-09 | H1 | Captura tablero + repo + minuta | Cristóbal Chacón |
-| mié 30-09 | H2 | Tablero actualizado + ER + planificación v1.0 | Milton [Apellido] |
+| mié 30-09 | H2 | Tablero actualizado + ER + planificación v1.0 | Milton Zambrano |
 | mar 06-10 | H3 | Demo MVP v0.1 (RF-01..04) + Reporte N.º 1 | Cristóbal Chacón |
 | mié 07-10 | H4 | MVP v0.9 + registro de cambio + Reporte N.º 2 | Equipo |
 | mar 13-10 | Final | MVP v1.0 + informe + presentación | Equipo |
@@ -439,7 +439,7 @@ gantt
 
 | | |
 |---|---|
-| **Asistentes** | Milton [Apellido] (Líder, Datos/QA), Cristóbal Chacón (Desarrollo) |
+| **Asistentes** | Milton Zambrano (Líder, Datos/QA), Cristóbal Chacón (Desarrollo) |
 | **Objetivo** | Aprobar la línea base del proyecto |
 
 **Acuerdos**

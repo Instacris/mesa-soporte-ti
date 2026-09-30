@@ -2,7 +2,7 @@
 
 **Fecha programada:** 29-09 · **Fecha real de ejecución:** 30-09 (inicio tardío, ver §9)
 
-**Roles en este hito:** Líder de Proyecto y Control: Cristóbal Chacón · Solución y Desarrollo: Milton [Apellido] · Datos, Calidad y Pruebas: Cristóbal Chacón
+**Roles en este hito:** Líder de Proyecto y Control: Cristóbal Chacón · Solución y Desarrollo: Milton Zambrano · Datos, Calidad y Pruebas: Cristóbal Chacón
 
 ## 1. Problema
 
@@ -60,9 +60,9 @@ ejerce los tres roles al menos una vez: en cada hito una persona asume dos roles
 
 | Fecha | Líder de Proyecto y Control | Solución y Desarrollo | Datos, Calidad y Pruebas |
 |---|---|---|---|
-| H1 (29-09, ejecutado 30-09) | Cristóbal Chacón | Milton [Apellido] | Cristóbal Chacón |
-| H2 (30-09) | Milton [Apellido] | Cristóbal Chacón | Milton [Apellido] |
-| H3 (06-10) | Cristóbal Chacón | Milton [Apellido] | Cristóbal Chacón |
+| H1 (29-09, ejecutado 30-09) | Cristóbal Chacón | Milton Zambrano | Cristóbal Chacón |
+| H2 (30-09) | Milton Zambrano | Cristóbal Chacón | Milton Zambrano |
+| H3 (06-10) | Cristóbal Chacón | Milton Zambrano | Cristóbal Chacón |
 | H4 (07-10) | Integración conjunta | Integración conjunta | Integración conjunta |
 
 Resultado: al cierre de H2 ambos integrantes ya ejercieron los tres roles.
@@ -130,7 +130,7 @@ Los wireframes detallados se entregan en H2.
 
 | | |
 |---|---|
-| **Asistentes** | Cristóbal Chacón (Líder, Datos/QA), Milton [Apellido] (Desarrollo) |
+| **Asistentes** | Cristóbal Chacón (Líder, Datos/QA), Milton Zambrano (Desarrollo) |
 | **Objetivo** | Iniciar el proyecto y dejar definida la planificación inicial |
 
 **Temas tratados**
