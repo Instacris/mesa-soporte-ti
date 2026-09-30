@@ -10,7 +10,7 @@ Proyecto de la Evaluación 3 – Mesa de Soporte TI.
 | Integrante | Usuario GitHub |
 |---|---|
 | Cristóbal Chacón | [@Instacris](https://github.com/Instacris) |
-| Milton [Apellido] | @[usuario] |
+| Milton [Apellido] | [@SIKEto](https://github.com/SIKEto) |
 
 - Tablero del proyecto (GitHub Projects): <https://github.com/users/Instacris/projects/1> — vistas *View 1* (tabla) y *Kanban*
 - Cada tarea del backlog es un *issue* del repositorio (T-00 = #1 … T-23 = #24)
