@@ -1,6 +1,6 @@
 {
   "name": "mesa-soporte-ti",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "description": "Sistema web de gestión de solicitudes de soporte TI (MVP)",
   "main": "src/server.js",
   "private": true,

@@ -9,12 +9,11 @@ Proyecto de la Evaluación 3 – Mesa de Soporte TI.
 
 | Integrante | Usuario GitHub |
 |---|---|
-| Cristóbal Chacón | @[usuario] |
+| Cristóbal Chacón | [@Instacris](https://github.com/Instacris) |
 | Milton [Apellido] | @[usuario] |
 
 - Tablero del proyecto: [enlace a GitHub Projects]
-- Estado actual: **MVP v0.1** — RF-01 a RF-04 implementados (registro, código único, listado, asignación y estados).
-  Pendientes: RF-05 (filtros) y RF-06 (resumen).
+- Estado actual: **MVP v0.9** — RF-01 a RF-06 implementados (registro, código único, listado, asignación, estados, filtros y resumen).
 
 ## Cómo ejecutar
 

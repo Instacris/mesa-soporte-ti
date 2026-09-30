@@ -31,9 +31,9 @@ peticiones HTTP que haría el navegador y verifica la respuesta y el contenido d
 | CP-09 | RF-04 | Cerrar ticket → fecha de cierre, sin más cambios | Automatizada | ✅ Aprobado |
 | CP-09b | RF-04 | Reabrir Resuelto → En proceso | Automatizada | ✅ Aprobado |
 | CP-09c | RF-04 | Exige indicar quién realiza el cambio | Automatizada | ✅ Aprobado |
-| CP-10 | RF-05 | Filtrar por estado | — | ⏳ Pendiente (RF-05 no implementado) |
-| CP-11 | RF-05 | Filtros combinados | — | ⏳ Pendiente (RF-05 no implementado) |
-| CP-12 | RF-06 | Resumen por estado | — | ⏳ Pendiente (RF-06 no implementado) |
+| CP-10 | RF-05 | Filtrar por estado | Automatizada | ✅ Aprobado (ejecución 2) |
+| CP-11 | RF-05 | Filtros combinados | Automatizada | ✅ Aprobado (ejecución 2) |
+| CP-12 | RF-06 | Resumen por estado (se actualiza al registrar y cerrar) | Automatizada + manual | ✅ Aprobado (ejecución 2) |
 | CP-13 | BD-01 | Persistencia tras reiniciar la app | Manual | ✅ Aprobado |
 | CP-14 | CAL-01 | Ticket inexistente → página amigable (404) | Automatizada | ✅ Aprobado |
 | CP-15 | CAL-01 | Texto con HTML se muestra escapado | Automatizada | ✅ Aprobado |
@@ -41,6 +41,15 @@ peticiones HTTP que haría el navegador y verifica la respuesta y el contenido d
 **Recorrido manual (navegador):** se registró *TKT-000007 "Proyector de sala B no enciende"* desde el formulario,
 se asignó a Elena Soto, se cambió a "En proceso" y se verificó el historial con los 3 movimientos y sus autores.
 Tras reiniciar el servidor el ticket seguía en la BD (CP-13).
+
+
+## Ejecución 2 — 30-09 (RF-05 y RF-06)
+
+**Ejecutado por:** Cristóbal Chacón · **Resultado:** 20/20 automatizadas aprobadas (16 anteriores como regresión + 4 nuevas)
+
+- CP-10, CP-11, CP-12 y un caso extra de RF-05 (filtros sin coincidencias y valores inválidos en la URL) aprobados.
+- Manual: filtro Categoría = Red → 2 de 7 tickets; el resumen sigue mostrando el total general (7).
+  Evidencia: [`evidencias/2026-09-30_listado_filtro_resumen.jpg`](evidencias/2026-09-30_listado_filtro_resumen.jpg).
 
 ## Registro de defectos
 
