@@ -50,8 +50,8 @@ Tras reiniciar el servidor el ticket seguía en la BD (CP-13).
 - CP-10, CP-11, CP-12 y un caso extra de RF-05 (filtros sin coincidencias y valores inválidos en la URL) aprobados.
 - Manual: filtro Categoría = Red → 2 de 7 tickets; el resumen sigue mostrando el total general (7).
   Evidencia: [`evidencias/2026-09-30_listado_filtro_resumen.jpg`](evidencias/2026-09-30_listado_filtro_resumen.jpg).
-##Revisión QA - 30-09
-*Revisado Por:* Milton Zambrano
+## Revisión QA - 30-09
+**Revisado Por:** Milton Zambrano
   ° Revise el Plan de pruebas y los casos CP-01 a CP-15:[ok/observaciones]
   ° Revisé y validé la línea base del H2 (alcance, costos, diagrama ER):[ok/observaciones]
 
