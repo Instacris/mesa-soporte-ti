@@ -186,3 +186,50 @@ test('CAL-01: el contenido ingresado se escapa (sin inyección de HTML)', async 
   assert.doesNotMatch(html, /<script>alert\(1\)<\/script>/);
   assert.match(html, /&lt;script&gt;/);
 });
+
+// Cuenta las filas de la tabla del listado (enlaces al detalle en la columna Código)
+const filasListado = (html) => (html.match(/<td><a href="\/tickets\/\d+">TKT-/g) || []).length;
+
+test('CP-10 (RF-05): filtrar por estado muestra solo los tickets en ese estado', async () => {
+  const { html } = await get('/?estado=' + encodeURIComponent('En proceso'));
+  assert.equal(filasListado(html), 2);
+  assert.match(html, /TKT-000002/);
+  assert.match(html, /TKT-000005/);
+});
+
+test('CP-11 (RF-05): filtros combinados (Red + Crítica) se aplican a la vez', async () => {
+  const { html } = await get('/?categoriaId=3&prioridad=' + encodeURIComponent('Crítica'));
+  assert.equal(filasListado(html), 1);
+  assert.match(html, /TKT-000002/);
+  assert.match(html, /Limpiar/);
+});
+
+test('RF-05: filtros sin coincidencias muestran mensaje; valores inválidos se ignoran', async () => {
+  const sinResultados = await get('/?estado=Cerrado&prioridad=' + encodeURIComponent('Crítica'));
+  assert.equal(filasListado(sinResultados.html), 0);
+  assert.match(sinResultados.html, /Ninguna solicitud coincide/);
+
+  const invalidos = await get('/?estado=Inventado&categoriaId=999&prioridad=x');
+  assert.equal(invalidos.status, 200);
+  assert.equal(filasListado(invalidos.html), 6);
+});
+
+test('CP-12 (RF-06): el resumen muestra total y cantidad por estado', async () => {
+  const cifra = (html, etiqueta) =>
+    Number(new RegExp(`<span>${etiqueta}</span>\\s*<strong>(\\d+)</strong>`).exec(html)[1]);
+  let { html } = await get('/');
+  assert.equal(cifra(html, 'Total'), 6);
+  assert.equal(cifra(html, 'Nuevo'), 2);
+  assert.equal(cifra(html, 'En proceso'), 2);
+  assert.equal(cifra(html, 'Resuelto'), 1);
+  assert.equal(cifra(html, 'Cerrado'), 1);
+
+  // Se actualiza al registrar y al cambiar estado; no depende de los filtros
+  await post('/tickets', TICKET_VALIDO);
+  await post('/tickets/3/estado', { estado: 'Cerrado', usuarioId: '3' });
+  ({ html } = await get('/?estado=Nuevo'));
+  assert.equal(cifra(html, 'Total'), 7);
+  assert.equal(cifra(html, 'Nuevo'), 3);
+  assert.equal(cifra(html, 'Resuelto'), 0);
+  assert.equal(cifra(html, 'Cerrado'), 2);
+});

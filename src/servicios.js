@@ -59,6 +59,18 @@ function crearServicios(repo) {
   return {
     buscarTicket,
 
+    // RF-05: descarta valores de filtro que no correspondan a opciones válidas
+    normalizarFiltros(query) {
+      const estado = texto(query.estado);
+      const prioridad = texto(query.prioridad);
+      const categoriaId = aEntero(query.categoriaId);
+      return {
+        estado: ESTADOS.includes(estado) ? estado : '',
+        prioridad: PRIORIDADES.includes(prioridad) ? prioridad : '',
+        categoriaId: categoriaId && repo.obtenerCategoria(categoriaId) ? categoriaId : null,
+      };
+    },
+
     // CAL-01: valida los datos del formulario de RF-01. Devuelve { errores, valores }.
     validarNuevoTicket(datos) {
       const valores = {

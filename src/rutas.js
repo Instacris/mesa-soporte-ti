@@ -1,5 +1,5 @@
 const express = require('express');
-const { ErrorNegocio, PRIORIDADES, TRANSICIONES } = require('./servicios');
+const { ErrorNegocio, PRIORIDADES, ESTADOS, TRANSICIONES } = require('./servicios');
 
 // Mensajes de confirmación que se muestran tras redirigir (?ok=...)
 const MENSAJES_OK = {
@@ -40,11 +40,18 @@ function crearRutas(repo, servicios) {
     });
   }
 
-  // RF-03: listado
+  // RF-03 listado + RF-05 filtros + RF-06 resumen
   router.get('/', (req, res) => {
+    const filtros = servicios.normalizarFiltros(req.query);
     res.render('listado', {
       titulo: 'Solicitudes',
-      tickets: repo.listarTickets(),
+      tickets: repo.listarTickets(filtros),
+      resumen: repo.resumenPorEstado(),
+      filtros,
+      hayFiltros: Boolean(filtros.estado || filtros.prioridad || filtros.categoriaId),
+      estados: ESTADOS,
+      prioridades: PRIORIDADES,
+      categorias: repo.listarCategorias(),
       ok: mensajeOk(req),
       codigo: req.query.codigo,
     });

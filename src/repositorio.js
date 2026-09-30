@@ -54,9 +54,24 @@ function crearRepositorio(db) {
       return db.prepare('SELECT id, nombre, activa FROM categoria WHERE id = ?').get(id);
     },
 
-    // RF-03
-    listarTickets() {
-      return db.prepare(`${SELECT_TICKET} ORDER BY t.fecha_creacion DESC, t.id DESC`).all();
+    // RF-03 + RF-05: los filtros ya vienen validados por la capa de servicios
+    listarTickets({ estado, prioridad, categoriaId } = {}) {
+      const condiciones = [];
+      const params = [];
+      if (estado) { condiciones.push('t.estado = ?'); params.push(estado); }
+      if (prioridad) { condiciones.push('t.prioridad = ?'); params.push(prioridad); }
+      if (categoriaId) { condiciones.push('t.categoria_id = ?'); params.push(categoriaId); }
+      const where = condiciones.length ? `WHERE ${condiciones.join(' AND ')}` : '';
+      return db.prepare(`${SELECT_TICKET} ${where} ORDER BY t.fecha_creacion DESC, t.id DESC`).all(...params);
+    },
+
+    // RF-06
+    resumenPorEstado() {
+      const filas = db.prepare('SELECT estado, cantidad FROM v_resumen_estado').all();
+      return {
+        total: filas.reduce((suma, f) => suma + f.cantidad, 0),
+        porEstado: filas,
+      };
     },
 
     obtenerTicket(id) {
