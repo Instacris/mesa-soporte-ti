@@ -432,7 +432,7 @@ gantt
 ## 12. Evidencia del hito
 
 - [x] Captura del tablero actualizado → [`evidencias/2026-09-30_H2_tablero_kanban.jpg`](evidencias/2026-09-30_H2_tablero_kanban.jpg)
-- [ ] Diagrama ER (captura de este documento en GitHub) → `docs/evidencias/H2_ER.png`
+- [x] Diagrama ER renderizado en GitHub → [`evidencias/2026-09-30_H2_diagrama_ER_1.jpg`](evidencias/2026-09-30_H2_diagrama_ER_1.jpg), [`_2.jpg`](evidencias/2026-09-30_H2_diagrama_ER_2.jpg)
 - [x] Este documento publicado en el repositorio (planificación v1.0)
 
 ## Minuta H2 — 30-09
