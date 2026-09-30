@@ -52,8 +52,8 @@ Tras reiniciar el servidor el ticket seguía en la BD (CP-13).
   Evidencia: [`evidencias/2026-09-30_listado_filtro_resumen.jpg`](evidencias/2026-09-30_listado_filtro_resumen.jpg).
 ## Revisión QA - 30-09
 **Revisado Por:** Milton Zambrano
-  ° Revise el Plan de pruebas y los casos CP-01 a CP-15:[ok/observaciones]
-  ° Revisé y validé la línea base del H2 (alcance, costos, diagrama ER):[ok/observaciones]
+- Revise el Plan de pruebas y los casos CP-01 a CP-15:[ok/observaciones]
+- Revisé y validé la línea base del H2 (alcance, costos, diagrama ER):[ok/observaciones]
 
 ## Registro de defectos
 
