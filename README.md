@@ -12,7 +12,8 @@ Proyecto de la Evaluación 3 – Mesa de Soporte TI.
 | Cristóbal Chacón | [@Instacris](https://github.com/Instacris) |
 | Milton [Apellido] | @[usuario] |
 
-- Tablero del proyecto: [enlace a GitHub Projects]
+- Tablero del proyecto (GitHub Projects): <https://github.com/users/Instacris/projects/1> — vistas *View 1* (tabla) y *Kanban*
+- Cada tarea del backlog es un *issue* del repositorio (T-00 = #1 … T-23 = #24)
 - Estado actual: **MVP v0.9** — RF-01 a RF-06 implementados (registro, código único, listado, asignación, estados, filtros y resumen).
 
 ## Cómo ejecutar
