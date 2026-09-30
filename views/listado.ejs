@@ -1,0 +1,40 @@
+<%- include('partials/cabecera', { titulo }) %>
+
+<h1>Solicitudes de soporte</h1>
+
+<% if (ok) { %>
+  <div class="alerta exito" role="status">
+    <%= ok %><% if (codigo) { %> Código: <strong><%= codigo %></strong><% } %>
+  </div>
+<% } %>
+
+<% if (tickets.length === 0) { %>
+  <p class="vacio">No hay solicitudes registradas. <a href="/tickets/nuevo">Registrar la primera</a>.</p>
+<% } else { %>
+  <div class="tabla-scroll">
+    <table class="tabla">
+      <thead>
+        <tr>
+          <th>Código</th><th>Título</th><th>Categoría</th><th>Prioridad</th>
+          <th>Estado</th><th>Responsable</th><th>Creado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% tickets.forEach((t) => { %>
+          <tr>
+            <td><a href="/tickets/<%= t.id %>"><%= t.codigo %></a></td>
+            <td><a href="/tickets/<%= t.id %>"><%= t.titulo %></a></td>
+            <td><%= t.categoria %></td>
+            <td><span class="etiqueta prioridad-<%= clase(t.prioridad) %>"><%= t.prioridad %></span></td>
+            <td><span class="etiqueta estado-<%= clase(t.estado) %>"><%= t.estado %></span></td>
+            <td><%= t.responsable || 'Sin asignar' %></td>
+            <td class="nowrap"><%= fecha(t.fecha_creacion) %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+  <p class="nota"><%= tickets.length %> solicitud(es), de la más reciente a la más antigua.</p>
+<% } %>
+
+<%- include('partials/pie') %>
